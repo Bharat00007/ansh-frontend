@@ -1,0 +1,235 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px 12px;
+  background-color: #1e1e1e;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: "Arial", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: aqua;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Reduced gap */
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.nav-links a:hover {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+.nav-links a.active {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Reduced gap */
+}
+
+.search-button,
+.notification-button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.search-button:hover,
+.notification-button:hover {
+  color: #e0e0e0;
+}
+
+.nav-right a {
+  color: white;
+  font-size: 1rem;
+}
+
+.profile-settings img {
+  width: 30px;
+  height: 30px;
+  border-radius: 70%;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.profile-settings img:hover {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.search-dropdown {
+  position: absolute;
+  top: 55px;
+  right: 20px;
+  background-color: #333;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  width: 200px;
+}
+
+.search-dropdown-item {
+  padding: 10px 15px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-dropdown-item:hover {
+  background-color: #555;
+}
+
+.notifications-dropdown {
+  position: absolute;
+  top: 55px;
+  right: 20px;
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1002;
+  width: 300px;
+  color: #fff;
+}
+
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  font-weight: bold;
+}
+
+.notifications-close {
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.notifications-list {
+  padding: 10px;
+}
+
+.notifications-select {
+  padding: 10px 15px;
+  font-size: 0.9em;
+  color: #888;
+}
+
+.notification-item {
+  display: flex;
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.notification-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-text {
+  font-size: 0.9em;
+}
+
+.notification-time {
+  font-size: 0.8em;
+  color: #888;
+}
+/* 
+/* Responsive for 360x740 screen */
+@media (max-width: 360px) {
+  /* ... other responsive styles ... */
+
+  .nav-right {
+    /* ... other nav-right styles ... */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  .search-button,
+  .notification-button {
+    /* ... other button styles ... */
+    font-size: 0.7rem; /* Further reduced icon size */
+  }
+
+  .nav-right a {
+    /* Target the Home icon link */
+    /* ... other Home icon styles ... */
+    font-size: 0.8rem; /* Further reduced icon size */
+  }
+
+  .profile-settings img {
+    /* ... other profile image styles ... */
+    width: 25px; /* Further reduced image size */
+    height: 25px;
+  }
+
+  .logo {
+    /* ... other logo styles ... */
+    font-size: 0.8rem; /* Further reduced font size */
+  }
+
+  .nav-links a {
+    /* ... other link styles ... */
+    font-size: 0.7rem; /* Further reduced font size */
+  }
+}
+*/ @media (max-width: 360px) {
+  /* ... other responsive styles ... */
+
+  .nav-right {
+    /* ... other nav-right styles ... */
+    flex-wrap: nowrap; /* Prevent icons from wrapping */
+    overflow-x: auto; /* Enable horizontal scrolling if necessary */
+    width: 100%; /* Ensure nav-right takes full width */
+    justify-content: space-between; /* Distribute icons evenly */
+  }
+
+  /* Optional: Add some padding to the container for better scrolling */
+  .nav-right {
+    padding: 0 10px;
+  }
+}
